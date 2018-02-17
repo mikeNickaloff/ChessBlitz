@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/c_bb.svg</file>
+        <file>images/c_bk.svg</file>
+        <file>images/c_bn.svg</file>
+        <file>images/c_bp.svg</file>
+        <file>images/c_bq.svg</file>
+        <file>images/c_br.svg</file>
+        <file>images/c_wb.svg</file>
+        <file>images/c_wk.svg</file>
+        <file>images/c_wn.svg</file>
+        <file>images/c_wp.svg</file>
+        <file>images/c_wq.svg</file>
+        <file>images/c_wr.svg</file>
+        <file>images/point.svg</file>
+        <file>main.qml</file>
+        <file>images/particles/explode1.png</file>
+        <file>images/particles/explode2.png</file>
+        <file>images/particles/explode3.png</file>
+        <file>images/particles/explode4.png</file>
+        <file>ExplosionParticle.qml</file>
+        <file>images/particles/smoke1.png</file>
+        <file>images/particles/smoke2.png</file>
+        <file>images/particles/smoke3.png</file>
+        <file>images/particles/smoke4.png</file>
+        <file>MovementParticle.qml</file>
+        <file>images/particles/bfgboltarc.png</file>
+        <file>images/particles/plasma.png</file>
+        <file>images/particles/expbase.png</file>
+        <file>DebrisParticle.qml</file>
+        <file>ClientConnection.qml</file>
+        <file>images/star.png</file>
+        <file>images/logo-shape-side.png</file>
+        <file>images/logo-shape.png</file>
+        <file>images/c_wr_side.svg</file>
+        <file>images/particle.png</file>
+        <file>GameOverDialog.qml</file>
+        <file>GameOverForm.ui.qml</file>
+
+    </qresource>
+</RCC>
