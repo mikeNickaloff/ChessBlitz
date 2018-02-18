@@ -243,43 +243,20 @@ bool Board::square_has_enemy(Square *square1, Square *square2)
 
 QByteArray Board::serialize()
 {
-    QByteArray rv;
-    QDataStream rStream(&rv, QIODevice::WriteOnly);
-    foreach (Square* i_square, m_squares.values()) {
-        if (i_square->piece() != 0) {
+    /* Removed to stop hackers */
+  
 
-            if (i_square->piece()->player() != 2) {
-                QByteArray locator;
-                QDataStream stream(&locator, QIODevice::WriteOnly);
-                stream << ((i_square->m_row * 10) + i_square->m_col) << i_square->serialize();
-                rStream << locator;
-            }
-        }
-    }
-
-    //qDebug() << rv.length();
-
-    return qCompress(rv,9).toHex();
+    
 }
 
 QString Board::boardHash()
 {
-    QByteArray tmp_data = this->serialize().toHex();
-    QString rv = QString::fromLocal8Bit(QCryptographicHash::hash(tmp_data, QCryptographicHash::Md5).toHex());
-    return rv;
+    /* removed to stop hackers */
 }
 
 QString Board::encrypt(QString str)
 {
-    QAESEncryption encryption(QAESEncryption::AES_128, QAESEncryption::ECB);
-    QString key = generateHash(this->game_id(), "1234567890");
-     QByteArray encodedText = encryption.encode(str.toLocal8Bit(), key.toLocal8Bit());
-
-     //QByteArray decodedText = encryption.decode(str.toLocal8Bit(), this->game_id().toLocal8Bit());
-     QByteArray rv = encodedText.toBase64();
-     qDebug() << str << key << rv;
-     return QString::fromLocal8Bit(rv);
-}
+ /* removed to stop hackers */
 
 qint64 Board::totalGameMS()
 {
@@ -288,9 +265,7 @@ qint64 Board::totalGameMS()
 
 QString Board::generateHash(QString param1, QString param2)
 {
-    QByteArray tmp_data = param1.toLocal8Bit().append(param2.toLocal8Bit());
-    QString rv = QString::fromLocal8Bit(QCryptographicHash::hash(tmp_data, QCryptographicHash::Keccak_384).toHex());
-    return rv;
+    /* removed to stop hackers */
 }
 
 void Board::init_square(int row, int col, Square *i_square)
@@ -309,7 +284,11 @@ void Board::select_square(Square *i_square)
         if (i_square->m_highlight == true) {
             if (selectedSquare != 0) {
                 assign_piece(i_square->row(), i_square->col(), selectedSquare->m_piece->m_rank, selectedSquare->m_piece->m_owner);
-                assign_piece(selectedSquare->row(), selectedSquare->col(), selectedSquare->m_piece->m_rank, 2);
+                assign_piece(selectedSquare->row(), selectedSquare->col(), selectedSquare->m_piece->m_rank, 2);QByteArray tmp_data = param1.toLocal8Bit().append(param2.toLocal8Bit());
+269
+    QString rv = QString::fromLocal8Bit(QCryptographicHash::hash(tmp_data, QCryptographicHash::Keccak_384).toHex());
+270
+    return rv;
                 i_square->m_highlight = false;
                 selectedSquare = 0;
                 foreach (Square* sq, this->m_squares.values()) {
