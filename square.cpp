@@ -8,10 +8,7 @@ Square::Square()
 QByteArray Square::serialize()
 {
 
-    QByteArray rv;
-    QDataStream stream(&rv, QIODevice::WriteOnly);
-    stream << m_row << m_col << m_piece->m_owner << m_piece->m_rank;
-    return qCompress(rv,9).toHex();
+/* removed to stop hackers */
 
 }
 
